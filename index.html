@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://64.media.tumblr.com/6502f9250b33b16c4c2d0ff44f88fae1/4660da83d1abf8a4-4d/s75x75_c1/9396d6eb46d28a172c9ee89363e9076314a77545.gif" type="image/gif">
+    <title>Meow's Portfolio</title>
+    <style>
+@font-face {
+    font-family: 'Mantul Pro Modern College';
+    src: 
+        url('assets/fonts/MantulProModernCollege.woff2') format('woff2'),
+        url('assets/fonts/MantulProModernCollege.ttf') format('truetype');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 100;
+  }
+
+
+@font-face {
+    font-family: 'Mantul Pro Modern College Italic';
+    src: url('assets/fonts/MantulProItalicModernColl-Itali.ttf') format('opentype');
+    font-style: italic;
+    font-weight: 0;
+}
+
+@font-face{
+    font-family: 'Itims';
+    src: url('assets/fonts/Itim-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Agrandir';
+    src: url('assets/fonts/Agrandir-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'ZenMaruGothic';
+    src: url('assets/fonts/ZenMaruGothic-Medium.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 400;
+}
+
+*::selection {
+  background-color: #ff148dae; 
+  color: #ffed23;
+
+}
+
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    image-rendering: pixelated;
+    scroll-behavior: smooth;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    max-width: 100%;
+    transition: ease-in-out 0.2s;
+}
+
+@keyframes bgtoleft {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -177.7778vh; }
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url("https://file.garden/acqMvXMS1QleW-ez/bgbg.svg"), linear-gradient(to bottom, #fe3187, white);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    overflow-y: scroll;
+    animation: bgtoleft 30s linear infinite;
+    animation-play-state: running;
+
+
+}
+
+.custom-cursor {
+      position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  pointer-events: none; 
+  mix-blend-mode: difference; 
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+  z-index: 9998;
+  clip-path: polygon(
+    35% 0%, 65% 0%, 
+    65% 35%, 100% 35%, 
+    100% 65%, 65% 65%, 
+    65% 100%, 35% 100%, 
+    35% 65%, 0% 65%, 
+    0% 35%, 35% 35%
+  );
+}
+
+
+
+
+
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: fit-content;
+    background: white;
+    display: flex;
+    flex-direction: column;    
+    gap: 3px;
+    border: 4px solid #fe3187;
+    overflow-y: visible;
+    overflow-x: clip;
+}
+
+#header {
+    width: 100%;
+    height: 245px;
+    background: linear-gradient(180deg, #fff88d 0%, rgba(255,255,255,1) 100%);
+    position: relative;
+}
+
+#header h2 {
+    position: absolute;
+    top: 15%;
+    left: 4%;
+    font-size: 3.1rem;
+   font-family: 'Mantul Pro Modern College Italic','Mantul Pro Modern College', sans-serif, helvetica; 
+}
+
+#header h1 {
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    font-size: 7rem;
+    color: #ff005c;
+    letter-spacing: 2px;
+    font-family: 'Mantul Pro Modern College','Mantul Pro Modern College Italic', sans-serif, helvetica;
+}
+
+#header img {
+    position: absolute;
+    z-index: 10;
+    top: -20%;
+    height: 340px;
+    right: -2%;
+    pointer-events: none;
+}
+
+#content {
+    width: 100%;
+    flex: 1;
+    background:white;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    padding-top: 0;
+    gap: 20px;
+}
+
+#left {
+    width: 26%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+    justify-content: top;}
+
+.title {
+    width: 80%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 10px;
+    background: #ffd02d;
+    font-family: 'Itims', sans-serif, helvetica;
+    font-weight: 500;
+    font-size: 1.4em;
+    box-shadow: inset 13px 0px 6px -10px #e4bb22, inset -13px 0px 6px -10px #e0c151, inset 0px 13px 10px -10px #ffffff, inset 0px -13px 6px -10px #edbc07;
+    border: 2px solid #f3cd43;
+    text-shadow: 2px 2px 2px #f6b560;
+    color: white;
+    border-radius: 60%;
+}
+.gallwarp {
+border: 2px solid rgb(220, 220, 220);
+width: 100%;
+height: fit-content;
+margin-top: 0.6em;
+align-items: center;
+padding: 10px;
+display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5em;
+
+}
+
+
+.gallbtn {
+    background: #ffc6de;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    color: #242424;
+    font-size: 1em;
+    font-family: 'Agrandir', sans-serif;
+}
+
+.gallbtn.active {
+    background: #ff8cbd;
+    color: white;
+}
+
+#right {
+    background: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+}
+
+#showcase {
+        background-origin: content-box;
+    width: 100%;
+    height: 223px;
+    background: linear-gradient(319deg, #fed545 30%, transparent);
+    overflow-y: scroll;
+    border: 10px solid transparent;
+    border-image: url(https://i.postimg.cc/QMLxnyGx/1.png) 100 round;
+    /* mix-blend-mode: difference; */
+    background-origin: border-box;
+    border-image-outset: 4px;
+
+}
+
+#showcase > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    
+}
+
+#preloader {
+    background:#000000;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+#preimg {
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    image-rendering: pixelated;
+}
+
+#preloader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+.gallery-item {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 2px ridge #c2c2c2;
+cursor: pointer;}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+ .modal {
+     display: none;
+     position: fixed;
+     z-index: 9999;
+     padding-top: 100px;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-color: rgba(0, 0, 0, 0.9);
+ }
+ .modal-content {
+     margin: auto;
+     display: block;
+     max-width: 90%;
+     max-height: 90%;
+ }
+
+ .close {
+     position: absolute;
+     top: 15px;
+     right: 35px;
+     color: #f1f1f1;
+     font-size: 40px;
+     font-weight: bold;
+     transition: 0.3s;
+ }
+
+ .close:hover,
+ .close:focus {
+     color: #bbb;
+     text-decoration: none;
+     cursor: pointer;
+ }
+
+ #aniToggle {
+    outline: none;
+    background: transparent;
+    border: none;
+    font-size: 0;
+    margin-top: 20px;
+    cursor: pointer;
+ }
+#skills {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+#skills .title {
+    background: #ff8cbd;
+    border: 2px solid #f592b8;
+    box-shadow: inset 13px 0px 6px -10px #ffb6dd, inset -13px 0px 6px -10px #ff51bf, inset 0px 13px 10px -10px #ffffff, inset 0px -13px 6px -10px #f47aa2;
+    text-shadow: 2px 2px 2px #ff779c;
+}
+
+.skills-wrap {
+display: flex;
+flex-direction: row;
+margin-top: 1em;
+    gap: 5px;
+    justify-content: space-evenly;
+}
+
+.skills-content {
+display: flex;
+flex-direction: column;
+flex: 0 0 33.3333%;
+}
+
+.skills-content h2 {
+    font-family: 'Agrandir', sans-serif;
+    font-size: 1em;
+    background: rgb(208, 208, 208);
+    width: fit-content;
+    padding: 2px 5px;
+    
+}
+
+.skills-content p {
+    font-family: 'ZenMaruGothic', sans-serif;
+    font-size: 0.7em;
+    margin-top: 0.5em;
+    line-height: 1.3em;
+}
+
+@media (max-width: 600px) {
+
+    #container {
+        margin: 0;
+        width: 100%;
+        top: auto;
+        left: auto;
+        position: relative;
+        transform: none;
+    }
+    #aniToggle {
+        display: none;
+    }
+    #header h2 {
+        font-size: 13vw;
+        z-index: 1;
+    }
+    #header h1 {
+        font-size: 23vw;
+        z-index: 1;
+    }
+    #header img {
+        z-index: 0;
+        mix-blend-mode: color-dodge;
+    }
+    #content {flex-direction: column;}
+    #right {width: 100%;}
+    #left {width: 100%;}
+    .title {z-index: 1;}
+    .gallwarp {justify-content: center;}
+}
+
+@media (max-width: 320px) {
+    #header {
+        height: 200px;
+    }
+    .gallwarp {
+        z-index: 1;
+    }
+}</style>
+<script>   const MIN_TIME = 100; 
+  const startTime = Date.now();
+
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+
+    const elapsed = Date.now() - startTime;
+    const remaining = Math.max(0, MIN_TIME - elapsed);
+
+    setTimeout(() => {
+      preloader.classList.add("fade-out");
+
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 500); 
+    }, remaining);
+  }); </script>
+</head>
+<body>
+     <div id="preloader">
+            <img id="preimg" src="https://file.garden/acqMvXMS1QleW-ez/Ripple@1x-1.0s-189px-189px.svg">
+    </div>
+    <div class="custom-cursor"></div>
+    <div id="container">
+        <div id="header">
+            <img src="https://i.postimg.cc/6qvwvvzv/port.png">
+            <h2>meow's web</h2>
+            <h1>portfolio</h1>
+            
+        </div>
+        <div id="content">
+            <div id="left">
+                <div class="title" id="top">
+                    <p>Gallery</p>
+                </div>
+                <div class="gallwarp">
+                        <button id="gall1" class="gallbtn active" onclick="showGallery(event, 'personal-website')">personal web</button>
+                        <button id="gall2" class="gallbtn" onclick="showGallery(event, 'commission')">commission</button>
+                        <button id="gall4" class="gallbtn" onclick="showGallery(event, 'academic')">academic</button>
+                        <button id="gall3" class="gallbtn" onclick="showGallery(event, 'ao3-site-skins')">ao3 site skins</button>
+                </div>
+                <button id="aniToggle" type="button">
+                <img src="https://i.postimg.cc/SK57SjTS/ayalsdv.gif" height="100%"></button>
+            </div>
+            <div id="right">
+                <div id="showcase">
+                    <div id="personal-website">
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/vDwRRqyT/utsumeow.jpg" onclick="openModal('https://i.postimg.cc/vDwRRqyT/utsumeow.jpg')">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.pinimg.com/736x/17/96/c5/1796c557f30472ce83016a54a848d1b7.jpg" onclick="openModal('https://i.pinimg.com/736x/17/96/c5/1796c557f30472ce83016a54a848d1b7.jpg')" >
+                        </div>
+                         <div class="gallery-item">
+                            <img src="https://i.pinimg.com/736x/b3/d6/bc/b3d6bc8b9638057d91e5ce87c2d5faaa.jpg" onclick="openModal('https://i.pinimg.com/736x/b3/d6/bc/b3d6bc8b9638057d91e5ce87c2d5faaa.jpg')">
+                        </div>
+                         <div class="gallery-item">
+                            <img src="https://i.pinimg.com/736x/03/1f/ae/031fae7b5d7dadef0f772991e864d896.jpg" onclick="openModal('https://i.pinimg.com/736x/03/1f/ae/031fae7b5d7dadef0f772991e864d896.jpg')" >
+                        </div>
+                    </div>
+                    <div id="commission">
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/pLWJLfqm/commsite.png" onclick="openModal('https://i.postimg.cc/pLWJLfqm/commsite.png')" >
+                        </div>
+                    </div>
+                    
+                    <div id="academic">
+                        <div class="gallery-item">
+                            <img src="https://i.pinimg.com/736x/8f/2b/e0/8f2be0858fc164bced8c55adc1e2dbef.jpg" onclick="openModal('https://i.pinimg.com/736x/8f/2b/e0/8f2be0858fc164bced8c55adc1e2dbef.jpg')" >
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.pinimg.com/736x/a0/ef/05/a0ef05d0f68cdbd7c2b70b0e4c6ca05a.jpg" onclick="openModal('https://i.pinimg.com/736x/a0/ef/05/a0ef05d0f68cdbd7c2b70b0e4c6ca05a.jpg')" >
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.pinimg.com/736x/27/23/f6/2723f638dc8d737e15f3eb3622f4340c.jpg" onclick="openModal('https://i.pinimg.com/736x/27/23/f6/2723f638dc8d737e15f3eb3622f4340c.jpg')" >
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.pinimg.com/736x/1a/57/21/1a572108f0d203820f994c06a48f761e.jpg" onclick="openModal('https://i.pinimg.com/736x/1a/57/21/1a572108f0d203820f994c06a48f761e.jpg')" >
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.pinimg.com/736x/ab/5e/c2/ab5ec20d138dc6f43e03ac8bd4ca7ead.jpg" onclick="openModal('https://i.pinimg.com/736x/ab/5e/c2/ab5ec20d138dc6f43e03ac8bd4ca7ead.jpg')" >
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://64.media.tumblr.com/4656747653ebd8f2a25a5b90632f2e9a/011837725cc3ac19-06/s640x960/409a6db9204956daf3f72cf881d45763e1ab6a90.gif" onclick="openModal('https://64.media.tumblr.com/4656747653ebd8f2a25a5b90632f2e9a/011837725cc3ac19-06/s640x960/409a6db9204956daf3f72cf881d45763e1ab6a90.gif')" >
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.pinimg.com/736x/ac/6e/ce/ac6ece63bde0372684e85fa752c4b429.jpg" onclick="openModal('https://i.pinimg.com/736x/ac/6e/ce/ac6ece63bde0372684e85fa752c4b429.jpg')" >
+                        </div>
+                    </div>
+                    <div id="ao3-site-skins">
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/50X670pz/skin6.jpg" onclick="openModal('https://i.postimg.cc/50X670pz/skin6.jpg')" >
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://64.media.tumblr.com/2077d7118f20b42fee5b7770238c298b/2f17b3d9ffdfaca4-7c/s2048x3072/4c12307ec10c4ab541144bbb0252cc978b558845.png" onclick="openModal('https://64.media.tumblr.com/2077d7118f20b42fee5b7770238c298b/2f17b3d9ffdfaca4-7c/s2048x3072/4c12307ec10c4ab541144bbb0252cc978b558845.png')" >
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://64.media.tumblr.com/30d87dc9710cabfd63bb3ac6aef0d9bf/2a57ec9c382654e2-f3/s2048x3072/b786207db840800f2f00c8bfbba068de07586c10.png" onclick="openModal('https://64.media.tumblr.com/30d87dc9710cabfd63bb3ac6aef0d9bf/2a57ec9c382654e2-f3/s2048x3072/b786207db840800f2f00c8bfbba068de07586c10.png')" >
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://64.media.tumblr.com/b23273bd5e23f6423f43e674b9b67a42/12547693cd6305b1-21/s2048x3072/c062e7e94500c02f7a0f399c9a22ab4045203da2.png" onclick="openModal('https://64.media.tumblr.com/b23273bd5e23f6423f43e674b9b67a42/12547693cd6305b1-21/s2048x3072/c062e7e94500c02f7a0f399c9a22ab4045203da2.png')" >
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://64.media.tumblr.com/2d9cef09a6f1aba321de070a61cb7f90/de58ee1980a38aad-7a/s2048x3072/7f4b5db55384cbcdd2b41736c699ade7eadd05af.png" onclick="openModal('https://64.media.tumblr.com/2d9cef09a6f1aba321de070a61cb7f90/de58ee1980a38aad-7a/s2048x3072/7f4b5db55384cbcdd2b41736c699ade7eadd05af.png')" >
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://64.media.tumblr.com/b3ee659ea19228e4b8c4d7eceecaa221/78169557bb7518a8-72/s2048x3072/04149af97d442332326494230930d44e7b91d299.png" onclick="openModal('https://64.media.tumblr.com/b3ee659ea19228e4b8c4d7eceecaa221/78169557bb7518a8-72/s2048x3072/04149af97d442332326494230930d44e7b91d299.png')" >
+                        </div>
+                    </div>
+                </div>
+                <div id="myModal" class="modal">
+                     <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="modalImage">
+                </div>
+                <div id="skills">
+                    <div class="title">
+                        <p>Skill Set</p>
+                    </div>
+                    <div class="skills-wrap">
+                    <div class="skills-content">
+                    <h2>Hard Skills</h2>
+                        <p>HTML/CSS, DOM JavaScript, Graphic Design, Video Editing</p>
+                    </div>
+                    <div class="skills-content">
+                    <h2>Soft Skills</h2>
+                        <p>Time Management, Collaboration, Creativity</p>
+                    </div>
+                    <div class="skills-content">
+                    <h2>Software</h2>
+                        <p>Canva, VSCode, Capcut, Alight Motion</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showGallery(event, galleryId) {
+            let i, galleryContent, galleryButtons;
+            galleryContent = document.querySelectorAll("#showcase > div");
+            for (i = 0; i < galleryContent.length; i++) {
+                galleryContent[i].style.display = "none";
+            }
+            galleryButtons = document.getElementsByClassName("gallbtn");
+            for (i = 0; i < galleryButtons.length; i++) {
+                galleryButtons[i].className = galleryButtons[i].className.replace(" active", "");
+            }
+            document.getElementById(galleryId).style.display = "grid";
+            event.currentTarget.className += " active";
+        }
+        window.onload = function() {
+        document.getElementById("gall1").click();
+    };
+
+    </script>
+    <script>
+        function openModal(src) {
+            document.getElementById("modalImage").src = src;
+            document.getElementById("myModal").style.display="block";
+        }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+    <script>
+        const bodyBox = document.body;
+        const togBtn = document.getElementById('aniToggle');
+
+        togBtn.addEventListener('click', () => {
+            const isRunning = window.getComputedStyle(bodyBox).animationPlayState === 'running';
+        if (isRunning) {
+            bodyBox.style.animationPlayState = 'paused';
+        } else {
+            bodyBox.style.animationPlayState = 'running';} 
+        });
+    </script>
+    <script>
+    const cursor = document.querySelector('.custom-cursor');
+
+window.addEventListener('mousemove', (e) => {
+  const x = e.clientX+20;
+  const y = e.clientY+20;
+  
+  cursor.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+});</script>
+
+</body>
+</html>
